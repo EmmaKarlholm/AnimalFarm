@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AnimalFarm.classes.animals.cats
+namespace AnimalFarm.classes.animals.mammals.cats
 {
-    internal class Cat
+    internal class Cat : Mammal
     {
     }
 }
