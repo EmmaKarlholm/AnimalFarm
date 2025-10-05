@@ -1,34 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AnimalFarm.classes.animals
+﻿namespace AnimalFarm.classes.animals
 {
     abstract class Animal
     {
         public string Name { get; set; }
         public int Age { get; set; }
-        public double Height { get; set; }
-        public int Weight { get; set; }
+        public int MaxAge { get; set; }
         public string Colour { get; set; }
-        public bool IsTame { get; set; }
+        public string Speed { get; set; }
+        public int Size { get; set; }
+        public string Species { get; set; }
+        public PreferredFood PreferredFood { get; set; }
+        public WildOrTame Tamed { get; set; }
+        public ReptileOrMammalOrPlant AnimalType { get; set; }
 
 
-        public Animal(string name, int age, double height, int weight, string colour, bool isTame)
+        public Animal()
         {
-            Name = name;
-            Age = age;
-            Height = height;
-            Weight = weight;
-            Colour = colour;
-            IsTame = isTame;
+            Name = "Default Name";
+            Age = 0;
+            Colour = "Default Colour";
+            Speed = "Default Speed";
+            Size = 0;
+            Species = "Default Species";
+            AnimalType = ReptileOrMammalOrPlant.Plant;
         }
 
-        public abstract void MakeSound();
-        public abstract void Move();
-        public abstract void Eat();
+        public virtual void MakeSound()
+        {
+            Console.WriteLine("This indistinct sound should never be heard.");
+        }
+
+        public virtual void Move()
+        {
+            Console.WriteLine("This indistinct movement should never happen.");
+        }
+
+        public virtual void Eat()
+        {
+            Console.WriteLine("This unknown way of eating should never be performed.");
+        }
+
 
     }
 }

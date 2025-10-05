@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AnimalFarm.classes.animals.mammals
+﻿namespace AnimalFarm.classes.animals.mammals
 {
-    internal class Mammal : Animal
+    internal abstract class Mammal : Animal
     {
+        public Mammal()
+        {
+            AnimalType = ReptileOrMammalOrPlant.Mammal;
+
+        }
+
+        public abstract override void MakeSound();
+        public abstract override void Move();
+        public abstract override void Eat();
     }
+
 }
