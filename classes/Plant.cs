@@ -9,6 +9,7 @@
             AnimalType = ReptileOrMammalOrPlant.Plant;
             Tamed = WildOrTame.Wild;
             MaxAge = 100;
+            Species = "Plant";
             Speed = "cannot move";
         }
 

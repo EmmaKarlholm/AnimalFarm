@@ -143,6 +143,7 @@ namespace AnimalFarm
         public static (string, int, string, int) AskQuestions(string animal, bool isSnake)
         {
             Console.CursorVisible = true;
+            Console.Clear();
             Console.Write($"What is the {animal}'s name? ");
             string name = UserInput.TrimmedString();
             Console.Write("\n");
